@@ -17,17 +17,21 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
+      max-width: 600px;
+      margin: 0 auto;
       text-align: center;
       box-sizing: border-box;
       padding: 0 1rem;
     }
+    /* Uso di clamp per regolare dinamicamente la dimensione del font
+       in base alle dimensioni dello schermo */
     h1 {
-      font-size: 3rem;
+      font-size: clamp(2rem, 6vw, 3rem);
       margin-bottom: 1rem;
     }
     p {
-      font-size: 1.5rem;
+      font-size: clamp(1rem, 4vw, 1.5rem);
       line-height: 1.5;
       margin: 0;
     }
@@ -39,7 +43,7 @@
       color: #FFFF00;
     }
     .footer-note {
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       margin-top: 2rem;
     }
   </style>
@@ -48,10 +52,12 @@
   <div class="container">
     <h1>DOMINIO IN VENDITA</h1>
     <p>
+      Se vuoi acquistare questo dominio, scrivimi a<br>
       <a href="mailto:compraquestodominiogdf@gmail.com">compraquestodominiogdf@gmail.com</a>.
     </p>
     <div class="footer-note">
-      Affrettati ad acquistare il dominio per evitare che finisca nelle mani sbagliate e possa essere sfruttato a scopi malevoli.
+      Affrettati ad acquistare il dominio per evitare che finisca nelle mani sbagliate
+      e possa essere sfruttato a scopi malevoli.
     </div>
   </div>
 </body>
