@@ -1,27 +1,14 @@
-<?php
-// counter.txt deve trovarsi nella stessa cartella di questo file
-$file = 'counter.txt';
-
-if (!file_exists($file)) {
-    file_put_contents($file, '0');
-}
-
-$count = (int) file_get_contents($file);
-$count++;
-file_put_contents($file, $count);
-?>
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <!-- Codice Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3YNF10JBTL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-3YNF10JBTL');
-  </script>
-  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3YNF10JBTL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3YNF10JBTL');
+</script>
   <meta charset="UTF-8" />
   <meta name="keywords" content="circolo villa spada, guardia di finanza, roma, dominio in vendita, circolovillaspada.it" />
   <meta name="description" content="Circolo Villa Spada - Guardia di Finanza Roma. Il dominio circolovillaspada.it è in vendita. Contattaci per maggiori informazioni." />
@@ -47,6 +34,8 @@ file_put_contents($file, $count);
       box-sizing: border-box;
       padding: 0 1rem;
     }
+    /* Uso di clamp per regolare dinamicamente la dimensione del font
+       in base alle dimensioni dello schermo */
     h1 {
       font-size: clamp(2rem, 6vw, 3rem);
       margin-bottom: 1rem;
@@ -80,10 +69,6 @@ file_put_contents($file, $count);
       Affrettati ad acquistare il dominio per evitare che finisca nelle mani sbagliate
       e possa essere sfruttato a scopi malevoli.
     </div>
-    <!-- Qui mostri il contatore -->
-    <p style="margin-top: 2rem;">
-      Visite totali: <strong><?php echo $count; ?></strong>
-    </p>
   </div>
 </body>
 </html>
